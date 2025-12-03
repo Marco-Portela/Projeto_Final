@@ -1,0 +1,332 @@
+html {
+    scroll-behavior: smooth;
+}
+
+:root{
+    --azul-celeste: #00AFFF;
+    --azul-celeste-suave: #e7f1f3;
+    --azul-celeste-medio: #d1ebf0;
+    --azul-claro: #c2eafc;
+    --azul-medio: #95d8f7;
+    --branco: #FFFFFF;
+    --texto-cinza: #333333;
+    --font-black:  #000000;
+    --font-white: #ffffff;
+    --cinza-claro: #F1F1F1;
+    --cinza-medio: #E5E5E5;
+}
+
+body{
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+.barra-topo{
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    padding: 10px 20px;
+    background-color: var(--azul-celeste-suave);
+}
+
+.menu-principal ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#logo img{
+    list-style: none;
+    height: 80px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+#nome-logo{
+    list-style: none;
+    padding-right: 900px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-size: 30px;
+}
+
+.menu-principal a{
+    text-decoration: none;
+    color: var(--font-black);
+    font-size: 20px;
+    display: block;/*Deixa a tag ocupar todo o espaço do seu container*/
+    padding: 20px 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.menu-principal a:hover{
+    background-color: var(--azul-celeste);
+    color: var(--font-white);
+}
+
+.hero{
+    min-height: 115vh;
+    background-image: url(IMG/Fundo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    display: flex;             /* Ativa o Flexbox no "pai" */
+    justify-content: center; /* Centraliza o "filho" no eixo Horizontal */
+    align-items: center;     /* Centraliza o "filho" no eixo Vertical */
+    color: var(--font-white); /* Define a cor do texto padrão para branco */
+}
+
+.hero-content {
+    text-align: center; /* Centraliza o texto DENTRO da caixa */
+    max-width: 600px; /* Impede que o texto fique largo demais em telas grandes */
+    /* Efeito "Overlay": Fundo preto com 50% de transparência.
+       rgba(0, 0, 0, 0.5) = (Red, Green, Blue, Alpha/Opacidade)
+       Isso garante que o texto seja legível em cima de qualquer imagem.*/
+    background-color: #33c5ff68;; 
+    padding: 40px;
+    border-radius: 8px; /* Cantos arredondados */
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.hero-button {
+    display: inline-block;
+    background-color: #3cc5fb; /* O mesmo azul do hover do menu */
+    color: var(--font-white);
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 18px;
+    /* Efeito de transição suave */
+    transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+    background-color: var(--azul-celeste); /* Azul um pouco mais escuro */
+}
+
+.feature-container {
+    display: flex;
+    gap: 20px; /*Espaçamento entre os itens*/
+    padding: 60px 40px;
+    background-color: var(--azul-celeste-suave);
+}
+
+.feature-card{
+    /*Diz ao itém, ocupe uma parte igual ao espaço disponível*/
+    flex: 1;
+    padding: 60px;
+    background-color: var(--cinza-claro);
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(7, 0, 51, 0.54);
+    text-align: center;
+}
+
+.feature-card:hover{
+    box-shadow: 0 4px 10px rgba(7, 0, 51, 0.253);
+    transform: translateX(+5px);
+}
+
+.card-info{
+    background-color: var(--azul-celeste-medio);
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    padding: 5% 0% 5% 0%;
+}
+
+.card-imagem{
+    flex: 1;
+    padding-left: 8%;
+    padding-right: 0%;
+}
+
+.card-texto{
+    flex: 1;
+    padding-left: 0%;
+    padding-right: 10%;
+}
+
+.card-imagem img{
+    max-width: 80%;
+    display: block;
+    border-radius: 30px;
+}
+
+.orcamento {
+    display: flex; /* Coloca lado a lado */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: space-between; /* Separa as colunas */
+    padding: 10px 60px;
+    background-color:var(--azul-celeste-medio);
+    border-top: 1px solid #ccc;
+}
+
+.orcamento-form {
+    flex: 1; /* Ocupa 50% */
+    padding-right: 50px; /* Espaço entre o formulário e a imagem */
+
+}
+
+.orcamento-img {
+    flex: 1; /* Ocupa 50% */
+    max-width: 40%;
+}
+
+/* Garante que a imagem seja responsiva */
+.orcamento-img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Borda arredondada na imagem fica elegante */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Uma sombra suave */
+}
+
+form label {
+    display: block; /* Faz o label ficar em uma linha própria */
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--font-black);
+}
+
+/* Estilo dos Campos (Inputs e Textarea) */
+form input, form textarea {
+    width: 100%; /* Ocupa toda a largura da coluna */
+    padding: 15px; /* Espaço interno confortável para digitar */
+    margin-bottom: 20px; /* Espaço até o próximo campo */
+    border: 1px solid #000000;
+    border-radius: 5px;
+    font-family: inherit; /* Herda a fonte do site */
+    background-color:var(--azul-celeste-suave);
+}
+
+.intro-sobre{
+    background-color: var(--azul-celeste-medio);
+    border-top: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    padding: 5% 0% 5% 0%;
+}
+
+/*.feature-sobre {
+    display: flex;
+    gap: 20px; /*Espaçamento entre os itens
+    padding: 60px 30px;
+    background-color: var(--azul-celeste-medio);
+    flex-direction: column;
+}
+
+#titulo-sobre{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.feature-cardsobre{
+    /*Diz ao itém, ocupe uma parte igual ao espaço disponível
+    flex: 1;
+    padding: 30px;
+    background-color: var(--azul-medio);
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(7, 0, 51, 0.54);
+    text-align: center;
+}*/
+
+.feature-sobre {
+    padding: 3% 2% 3% 2%;
+    background-color: var(--azul-celeste-suave);
+    text-align: center;
+    font-size: 18PX;
+}
+
+.cards-wrapper {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.feature-cardsobre {
+    flex: 1;
+    padding: 3%;
+    background-color: var(--azul-medio);
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(7, 0, 51, 0.54);
+    text-align: center;
+}
+
+.feature-cardsobre:hover{
+    box-shadow: 0 4px 10px rgba(7, 0, 51, 0.253);
+    transform: translateX(+5px);
+}
+
+.sobre-img{
+    flex: 1;
+    padding-left: 0%;
+    padding-right: 0%;
+}
+
+.texto-sobre{
+    flex: 1;
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: center;
+    /*border: 5px solid #000000;*/
+    margin: 2%;
+    font-size: 18px;
+}
+
+.sobre-img img{
+    max-width: 65%;
+    display: block;
+    border-radius: 15px;
+}
+
+footer{
+    background-color: var(--azul-celeste);
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.contato {
+    display: flex; /* Coloca lado a lado */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: space-between; /* Separa as colunas */
+    padding: 3% 2% 3% 2%;
+    background-color:var(--azul-celeste-medio);
+    border-top: 1px solid #ccc;
+    font-size: 18px;
+}
+
+.contato-text{
+    padding-right: 20%;
+}
+
+.contato-img {
+    max-width: 40%;
+    padding-left: 15%;
+}
+
+/* Garante que a imagem seja responsiva */
+.contato-img img {
+    max-width: 60%;
+    height: auto;
+    border-radius: 5px; /* Borda arredondada na imagem fica elegante */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Uma sombra suave */
+}
